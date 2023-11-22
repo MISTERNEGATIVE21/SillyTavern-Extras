@@ -22,8 +22,8 @@ services:
          MODULES: caption,summarize,classify,sd,silero-tts,edge-tts,chromadb
     volumes:
       #- "./chromadb:/chromadb"
-      - "./cache:/root/.cache"
-      - "./api_key.txt:/sillytavern-extras/api_key.txt:rw"
+      - "/data/silly-extra/cache:/root/.cache"
+      - "/data/silly-extra/api_key.txt:/sillytavern-extras/api_key.txt:rw"
     ports:
       - "5100:5100"
     environment:
