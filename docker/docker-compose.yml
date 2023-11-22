@@ -21,7 +21,7 @@ services:
          REQUIREMENTS: requirements-complete.txt
          MODULES: caption,summarize,classify,sd,silero-tts,edge-tts,chromadb
     volumes:
-      #- "./chromadb:/chromadb"
+      - "./chromadb:/chromadb"
       - "/data/silly-extra/cache:/root/.cache"
       - "/data/silly-extra/api_key.txt:/sillytavern-extras/api_key.txt:rw"
     ports:
